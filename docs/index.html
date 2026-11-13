@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Yun Liao · Academic Homepage</title>
+<style>
+:root{color-scheme:light;--bg:#fff;--ink:#222a35;--line:#dbe2ea;--link:#205891;--panel:#f4f6f9}html[data-dark]{color-scheme:dark;--bg:#121a24;--ink:#e8edf4;--line:#344357;--link:#9ccafa;--panel:#1c2633}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 'Segoe UI',sans-serif}a{color:var(--link);text-underline-offset:3px}header{border-bottom:1px solid var(--line)}nav,footer,.layout{width:min(1120px,calc(100% - 40px));margin:auto}nav{display:flex;gap:1.1rem;align-items:center;flex-wrap:wrap;padding:1rem 0}nav strong{margin-right:auto}button{font:inherit;background:var(--panel);color:inherit;border:1px solid var(--line);border-radius:6px;padding:.2rem .6rem;cursor:pointer}.layout{display:grid;grid-template-columns:205px minmax(0,780px);gap:62px;padding:42px 0 16px;align-items:start}aside{position:sticky;top:24px}.avatar{display:grid;place-items:center;width:112px;aspect-ratio:1;border-radius:50%;background:var(--panel);color:var(--link);font-size:35px;font-weight:650}h1{margin:0;font-size:2.2rem}h2{font-size:1.45rem}aside h2{margin:.65rem 0 0;font-size:1.2rem}aside p{margin:.3rem 0}section,footer{border-top:1px solid var(--line);padding:1rem 0}li+li{margin-top:.75rem}.papers{list-style:none;padding:0}.papers li+li{border-top:1px solid var(--line);padding-top:.75rem}@media(max-width:720px){.layout{grid-template-columns:1fr;gap:1.2rem;padding-top:1.4rem}aside{position:static;display:flex;gap:1rem;align-items:center}.avatar{width:64px;font-size:22px}nav strong{flex-basis:100%}}
+</style><body id="top">
+<header><nav aria-label="Main navigation"><strong>Yun Liao</strong><a href="#experience">Experience</a><a href="#publications">Publications</a><a href="#research">Research</a><a href="#updates">Updates</a><button type="button" id="theme" aria-pressed="false">Dark mode</button></nav></header>
+<div class="layout"><aside aria-label="Profile"><div class="avatar" aria-hidden="true">YL</div><div><h2>Yun Liao <span lang="zh-CN">廖云</span></h2><p>Hematology · Stem cell biology</p></div></aside><main>
+<h1>About Me</h1><p>I'm Yun Liao. My research focuses on hematopoietic stem cell biology and clinical hematology, including mitochondrial quality control in stem cells and prognostic markers in multiple myeloma.</p><p>I trained in internal medicine with a focus on hematology at Southwest Medical University and conducted research at the Coriell Institute for Medical Research.</p>
+<section id="experience"><h2>Education and Research Experience</h2><ul><li><strong>Coriell Institute for Medical Research</strong><br>Visiting Scholar · Jul 2024–Dec 2025<br>Predoctoral Researcher · Jul 2021–Jun 2024</li><li><strong>Southwest Medical University</strong><br>Master’s training in internal medicine, with a focus on hematology<br>Undergraduate studies in clinical medicine · Sep 2016–Jun 2021</li></ul></section>
+<section id="publications"><h2>Selected Publications</h2><ul class="papers"><li><a href="https://doi.org/10.3389/fimmu.2026.1820425">CAR-T cell therapy in non-Hodgkin lymphoma: a clinical trial landscape review</a><br>Wu J, <strong>Liao Y</strong>, Wang W, Zhang X · <em>Frontiers in Immunology</em> · 2026</li><li><a href="https://doi.org/10.1186/s13287-025-04304-7">Mitochondrial quality control in hematopoietic stem cells: mechanisms, implications, and therapeutic opportunities</a><br><strong>Liao Y</strong>, Octaviani S, Tian Z, et al. · <em>Stem Cell Research &amp; Therapy</em> · 2025</li><li><a href="https://doi.org/10.7754/Clin.Lab.2024.240148">Analysis of Correlation between Blood Inflammation Indicators in Peripheral Blood and Prognosis of Patients with Multiple Myeloma</a><br><strong>Liao Y</strong>, Liu J, Wei M, Chen R, Huang C · <em>Clinical Laboratory</em> · 2024</li></ul></section>
+<section id="research"><h2>Research Interests</h2><ul><li><strong>Hematopoietic stem cells</strong> · Mitochondrial quality control and mechanisms relevant to stem cell transplantation.</li><li><strong>Clinical hematology</strong> · Inflammatory markers and prognosis in multiple myeloma, with related work on therapies for hematologic malignancies.</li></ul></section>
+<section id="updates"><h2>News and Updates</h2><ul><li><strong>May 2026</strong> · Our review of the CAR-T cell therapy clinical trial landscape in non-Hodgkin lymphoma appeared in <em>Frontiers in Immunology</em>.</li><li><strong>2025</strong> · Our review of mitochondrial quality control in hematopoietic stem cells appeared in <em>Stem Cell Research &amp; Therapy</em>.</li></ul></section></main></div><footer><a href="#top">Back to top ↑</a></footer>
+<script>
+const button = document.getElementById('theme');
+function applyTheme(dark) {
+  document.documentElement.toggleAttribute('data-dark', dark);
+  button.setAttribute('aria-pressed', String(dark));
+}
+const saved = localStorage.getItem('yun-liao-theme');
+applyTheme(saved ? saved === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches);
+button.addEventListener('click', () => {
+  const dark = !document.documentElement.hasAttribute('data-dark');
+  applyTheme(dark);
+  localStorage.setItem('yun-liao-theme', dark ? 'dark' : 'light');
+});
+</script></body></html>
